@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB79C2D01ABEE97E008BCE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2CF1ABEE97E008BCE48 /* AppDelegate.swift */; };
+		BB79C2D21ABEE97E008BCE48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2D11ABEE97E008BCE48 /* ViewController.swift */; };
+		BB79C2D41ABEE97E008BCE48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2D31ABEE97E008BCE48 /* Images.xcassets */; };
+		BB79C2D71ABEE97F008BCE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2D51ABEE97F008BCE48 /* Main.storyboard */; };
+		BB79C2E31ABEE97F008BCE48 /* openweathermapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2E21ABEE97F008BCE48 /* openweathermapTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB79C2DD1ABEE97F008BCE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB79C2C21ABEE97E008BCE48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB79C2C91ABEE97E008BCE48;
+			remoteInfo = openweathermap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openweathermap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB79C2CE1ABEE97E008BCE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB79C2CF1ABEE97E008BCE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB79C2D11ABEE97E008BCE48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB79C2D31ABEE97E008BCE48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB79C2D61ABEE97F008BCE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openweathermapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB79C2E11ABEE97F008BCE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB79C2E21ABEE97F008BCE48 /* openweathermapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openweathermapTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB79C2C71ABEE97E008BCE48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB79C2D91ABEE97F008BCE48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB79C2C11ABEE97E008BCE48 = {
+			isa = PBXGroup;
+			children = (
+				BB79C2CC1ABEE97E008BCE48 /* openweathermap */,
+				BB79C2DF1ABEE97F008BCE48 /* openweathermapTests */,
+				BB79C2CB1ABEE97E008BCE48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB79C2CB1ABEE97E008BCE48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */,
+				BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB79C2CC1ABEE97E008BCE48 /* openweathermap */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2CF1ABEE97E008BCE48 /* AppDelegate.swift */,
+				BB79C2D11ABEE97E008BCE48 /* ViewController.swift */,
+				BB79C2D31ABEE97E008BCE48 /* Images.xcassets */,
+				BB79C2D51ABEE97F008BCE48 /* Main.storyboard */,
+				BB79C2CD1ABEE97E008BCE48 /* Supporting Files */,
+			);
+			path = openweathermap;
+			sourceTree = "<group>";
+		};
+		BB79C2CD1ABEE97E008BCE48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2CE1ABEE97E008BCE48 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB79C2DF1ABEE97F008BCE48 /* openweathermapTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2E21ABEE97F008BCE48 /* openweathermapTests.swift */,
+				BB79C2E01ABEE97F008BCE48 /* Supporting Files */,
+			);
+			path = openweathermapTests;
+			sourceTree = "<group>";
+		};
+		BB79C2E01ABEE97F008BCE48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2E11ABEE97F008BCE48 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB79C2C91ABEE97E008BCE48 /* openweathermap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB79C2E61ABEE97F008BCE48 /* Build configuration list for PBXNativeTarget "openweathermap" */;
+			buildPhases = (
+				BB79C2C61ABEE97E008BCE48 /* Sources */,
+				BB79C2C71ABEE97E008BCE48 /* Frameworks */,
+				BB79C2C81ABEE97E008BCE48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = openweathermap;
+			productName = openweathermap;
+			productReference = BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB79C2DB1ABEE97F008BCE48 /* openweathermapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB79C2E91ABEE97F008BCE48 /* Build configuration list for PBXNativeTarget "openweathermapTests" */;
+			buildPhases = (
+				BB79C2D81ABEE97F008BCE48 /* Sources */,
+				BB79C2D91ABEE97F008BCE48 /* Frameworks */,
+				BB79C2DA1ABEE97F008BCE48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB79C2DE1ABEE97F008BCE48 /* PBXTargetDependency */,
+			);
+			name = openweathermapTests;
+			productName = openweathermapTests;
+			productReference = BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB79C2C21ABEE97E008BCE48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Мялин Валентин";
+				TargetAttributes = {
+					BB79C2C91ABEE97E008BCE48 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BB79C2DB1ABEE97F008BCE48 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BB79C2C91ABEE97E008BCE48;
+					};
+				};
+			};
+			buildConfigurationList = BB79C2C51ABEE97E008BCE48 /* Build configuration list for PBXProject "openweathermap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB79C2C11ABEE97E008BCE48;
+			productRefGroup = BB79C2CB1ABEE97E008BCE48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB79C2C91ABEE97E008BCE48 /* openweathermap */,
+				BB79C2DB1ABEE97F008BCE48 /* openweathermapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB79C2C81ABEE97E008BCE48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2D41ABEE97E008BCE48 /* Images.xcassets in Resources */,
+				BB79C2D71ABEE97F008BCE48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB79C2DA1ABEE97F008BCE48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB79C2C61ABEE97E008BCE48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2D21ABEE97E008BCE48 /* ViewController.swift in Sources */,
+				BB79C2D01ABEE97E008BCE48 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB79C2D81ABEE97F008BCE48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2E31ABEE97F008BCE48 /* openweathermapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB79C2DE1ABEE97F008BCE48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB79C2C91ABEE97E008BCE48 /* openweathermap */;
+			targetProxy = BB79C2DD1ABEE97F008BCE48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB79C2D51ABEE97F008BCE48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB79C2D61ABEE97F008BCE48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB79C2E41ABEE97F008BCE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB79C2E51ABEE97F008BCE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BB79C2E71ABEE97F008BCE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = openweathermap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB79C2E81ABEE97F008BCE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = openweathermap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB79C2EA1ABEE97F008BCE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = openweathermapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openweathermap.app/Contents/MacOS/openweathermap";
+			};
+			name = Debug;
+		};
+		BB79C2EB1ABEE97F008BCE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = openweathermapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openweathermap.app/Contents/MacOS/openweathermap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB79C2C51ABEE97E008BCE48 /* Build configuration list for PBXProject "openweathermap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB79C2E41ABEE97F008BCE48 /* Debug */,
+				BB79C2E51ABEE97F008BCE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB79C2E61ABEE97F008BCE48 /* Build configuration list for PBXNativeTarget "openweathermap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB79C2E71ABEE97F008BCE48 /* Debug */,
+				BB79C2E81ABEE97F008BCE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB79C2E91ABEE97F008BCE48 /* Build configuration list for PBXNativeTarget "openweathermapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB79C2EA1ABEE97F008BCE48 /* Debug */,
+				BB79C2EB1ABEE97F008BCE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB79C2C21ABEE97E008BCE48 /* Project object */;
+}
