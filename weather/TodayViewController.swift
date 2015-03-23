@@ -58,8 +58,40 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             println("ура")
             
             
-            self.text01.stringValue = String(humidity!)
+            if var temp = temp {
+                self.text01.stringValue = String(format: "%.2f", temp)
+            }
+            else{
+                self.text01.stringValue = "-"
+            }
             
+            // Город
+            let nameCity = jsonResult["name"] as? String
+            
+            // Восход и закат
+            let jsonSys: NSDictionary! = jsonResult["sys"] as? NSDictionary
+            
+            let jsonSunrise = jsonSys["sunrise"] as? Double
+            let jsonSunset = jsonSys["sunset"] as? Double // закат
+            
+            if jsonSunrise != nil || jsonSunset != nil {
+            let sunrise = NSDate(timeIntervalSince1970: jsonSunrise!)
+            let sunset = NSDate(timeIntervalSince1970: jsonSunset!)
+            }
+            
+            // wind
+            let jsonWind: NSDictionary! = jsonResult["wind"] as? NSDictionary
+            let speedWind = jsonWind["speed"] as? Int
+            let degWind = jsonWind["deg"] as? Int
+            
+            // cloud
+            let jsonClouds: NSDictionary! = jsonResult["clouds"] as? NSDictionary
+            let clouds = jsonClouds["all"] as? Int
+            
+            
+            
+            
+                
             dispatch_async(dispatch_get_main_queue(), {
 
             })
@@ -68,8 +100,6 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         
         // Метод resume() начинает веб-запрос.
         jsonQuery.resume()
-
-
         completionHandler(.NoData)
     
 
