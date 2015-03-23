@@ -12,6 +12,11 @@
 		BB79C2D41ABEE97E008BCE48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2D31ABEE97E008BCE48 /* Images.xcassets */; };
 		BB79C2D71ABEE97F008BCE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2D51ABEE97F008BCE48 /* Main.storyboard */; };
 		BB79C2E31ABEE97F008BCE48 /* openweathermapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2E21ABEE97F008BCE48 /* openweathermapTests.swift */; };
+		BB79C2F31ABEECA2008BCE48 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB79C2F21ABEECA2008BCE48 /* NotificationCenter.framework */; };
+		BB79C2FA1ABEECA2008BCE48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2F81ABEECA2008BCE48 /* InfoPlist.strings */; };
+		BB79C2FC1ABEECA2008BCE48 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */; };
+		BB79C2FE1ABEECA2008BCE48 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */; };
+		BB79C3011ABEECA2008BCE48 /* weather.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BB79C2F01ABEECA2008BCE48 /* weather.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +27,28 @@
 			remoteGlobalIDString = BB79C2C91ABEE97E008BCE48;
 			remoteInfo = openweathermap;
 		};
+		BB79C2FF1ABEECA2008BCE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB79C2C21ABEE97E008BCE48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB79C2EF1ABEECA2008BCE48;
+			remoteInfo = weather;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB79C3051ABEECA2008BCE48 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB79C3011ABEECA2008BCE48 /* weather.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openweathermap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +60,13 @@
 		BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openweathermapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB79C2E11ABEE97F008BCE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB79C2E21ABEE97F008BCE48 /* openweathermapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openweathermapTests.swift; sourceTree = "<group>"; };
+		BB79C2F01ABEECA2008BCE48 /* weather.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = weather.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB79C2F21ABEECA2008BCE48 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BB79C2F61ABEECA2008BCE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB79C2F71ABEECA2008BCE48 /* weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = weather.entitlements; sourceTree = "<group>"; };
+		BB79C2F91ABEECA2008BCE48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB79C2ED1ABEECA2008BCE48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2F31ABEECA2008BCE48 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +100,8 @@
 			children = (
 				BB79C2CC1ABEE97E008BCE48 /* openweathermap */,
 				BB79C2DF1ABEE97F008BCE48 /* openweathermapTests */,
+				BB79C2F41ABEECA2008BCE48 /* weather */,
+				BB79C2F11ABEECA2008BCE48 /* Frameworks */,
 				BB79C2CB1ABEE97E008BCE48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +111,7 @@
 			children = (
 				BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */,
 				BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */,
+				BB79C2F01ABEECA2008BCE48 /* weather.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +153,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BB79C2F11ABEECA2008BCE48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2F21ABEECA2008BCE48 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB79C2F41ABEECA2008BCE48 /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */,
+				BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */,
+				BB79C2F51ABEECA2008BCE48 /* Supporting Files */,
+			);
+			path = weather;
+			sourceTree = "<group>";
+		};
+		BB79C2F51ABEECA2008BCE48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB79C2F61ABEECA2008BCE48 /* Info.plist */,
+				BB79C2F71ABEECA2008BCE48 /* weather.entitlements */,
+				BB79C2F81ABEECA2008BCE48 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,10 +191,12 @@
 				BB79C2C61ABEE97E008BCE48 /* Sources */,
 				BB79C2C71ABEE97E008BCE48 /* Frameworks */,
 				BB79C2C81ABEE97E008BCE48 /* Resources */,
+				BB79C3051ABEECA2008BCE48 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB79C3001ABEECA2008BCE48 /* PBXTargetDependency */,
 			);
 			name = openweathermap;
 			productName = openweathermap;
@@ -147,6 +221,23 @@
 			productReference = BB79C2DC1ABEE97F008BCE48 /* openweathermapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BB79C2EF1ABEECA2008BCE48 /* weather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB79C3021ABEECA2008BCE48 /* Build configuration list for PBXNativeTarget "weather" */;
+			buildPhases = (
+				BB79C2EC1ABEECA2008BCE48 /* Sources */,
+				BB79C2ED1ABEECA2008BCE48 /* Frameworks */,
+				BB79C2EE1ABEECA2008BCE48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = weather;
+			productName = weather;
+			productReference = BB79C2F01ABEECA2008BCE48 /* weather.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +253,14 @@
 					BB79C2DB1ABEE97F008BCE48 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = BB79C2C91ABEE97E008BCE48;
+					};
+					BB79C2EF1ABEECA2008BCE48 = {
+						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -180,6 +279,7 @@
 			targets = (
 				BB79C2C91ABEE97E008BCE48 /* openweathermap */,
 				BB79C2DB1ABEE97F008BCE48 /* openweathermapTests */,
+				BB79C2EF1ABEECA2008BCE48 /* weather */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +298,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB79C2EE1ABEECA2008BCE48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2FE1ABEECA2008BCE48 /* TodayViewController.xib in Resources */,
+				BB79C2FA1ABEECA2008BCE48 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +330,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB79C2EC1ABEECA2008BCE48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB79C2FC1ABEECA2008BCE48 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,6 +345,11 @@
 			isa = PBXTargetDependency;
 			target = BB79C2C91ABEE97E008BCE48 /* openweathermap */;
 			targetProxy = BB79C2DD1ABEE97F008BCE48 /* PBXContainerItemProxy */;
+		};
+		BB79C3001ABEECA2008BCE48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB79C2EF1ABEECA2008BCE48 /* weather */;
+			targetProxy = BB79C2FF1ABEECA2008BCE48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -238,6 +360,14 @@
 				BB79C2D61ABEE97F008BCE48 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB79C2F81ABEECA2008BCE48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB79C2F91ABEECA2008BCE48 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -325,8 +455,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = openweathermap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -336,8 +468,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = openweathermap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -378,6 +512,36 @@
 			};
 			name = Release;
 		};
+		BB79C3031ABEECA2008BCE48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = weather/weather.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = weather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BB79C3041ABEECA2008BCE48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = weather/weather.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = weather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,6 +561,7 @@
 				BB79C2E81ABEE97F008BCE48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB79C2E91ABEE97F008BCE48 /* Build configuration list for PBXNativeTarget "openweathermapTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +570,16 @@
 				BB79C2EB1ABEE97F008BCE48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB79C3021ABEECA2008BCE48 /* Build configuration list for PBXNativeTarget "weather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB79C3031ABEECA2008BCE48 /* Debug */,
+				BB79C3041ABEECA2008BCE48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

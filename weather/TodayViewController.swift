@@ -1,24 +1,31 @@
 //
-//  AppDelegate.swift
-//  openweathermap
+//  TodayViewController.swift
+//  weather
 //
 //  Created by Мялин Валентин on 3/22/15.
 //  Copyright (c) 2015 Мялин Валентин. All rights reserved.
 //
 
 import Cocoa
+import NotificationCenter
 
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class TodayViewController: NSViewController, NCWidgetProviding  {
+    
 
+    
+  @IBOutlet var text01: NSTextField!
 
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+    override var nibName: String? {
+        return "TodayViewController"
+    }
+    
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+        // Update your data and prepare for a snapshot. Call completion handler when you are done
+        // with NoData if nothing has changed or NewData if there is new data since the last
+        // time we called you
         
         // NSURLSession создается с объектом NSURL, содержащей URL веб-службы. Эта сессия используется для сетевых вызовов.
         let urlAsString = "http://api.openweathermap.org/data/2.5/weather?q=Dnipropetrovsk,UA&units=metric"
-        
         let url = NSURL(string: urlAsString)!
         let urlSession = NSURLSession.sharedSession()
         
@@ -34,8 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if (err != nil) {
                 println("JSON Error \(err!.localizedDescription)")
             }
-            
-            
             //println(jsonResult)
             
             
@@ -47,35 +52,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //let tempMin = jsonDate["temp_min"] as? Float
             let humidity = jsonDate["humidity"] as? Int // Влажность
             let pressure = jsonDate["pressure"] as? Int // Давление
+            println(temp)
+            println(humidity)
+            println(pressure)
+            println("ура")
             
-            println(temp!)
             
-            
-            
-            /*
-            
-            let nicknameWOT: NSString! = jsonDate2["nickname"] as? NSString
-            let global_rating: Int! = jsonDate2["global_rating"] as? Int
-            println(global_rating)
-            let jsonTime: Int! = jsonResult["count"] as Int*/
-            
+            self.text01.stringValue = String(humidity!)
             
             dispatch_async(dispatch_get_main_queue(), {
-                let test = jsonResult
-                // timeLabel.text = jsonTime
+
             })
         })
+        
+        
         // Метод resume() начинает веб-запрос.
-        
         jsonQuery.resume()
+
+
+        completionHandler(.NoData)
+    
+
         
-        
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
+}
