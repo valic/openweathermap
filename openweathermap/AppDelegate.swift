@@ -35,7 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 println("JSON Error \(err!.localizedDescription)")
             }
             
-            
             //println(jsonResult)
             
             
@@ -49,8 +48,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let pressure = jsonDate["pressure"] as? Int // Давление
             
             println(temp!)
-            
-            
             
             /*
             
@@ -69,13 +66,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         jsonQuery.resume()
         
-        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-
 
 }
 
