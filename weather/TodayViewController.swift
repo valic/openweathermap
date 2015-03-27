@@ -24,25 +24,46 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         // with NoData if nothing has changed or NewData if there is new data since the last
         // time we called you
         
-        // NSURLSession создается с объектом NSURL, содержащей URL веб-службы. Эта сессия используется для сетевых вызовов.
-        let urlAsString = "http://api.openweathermap.org/data/2.5/weather?q=Dnipropetrovsk,UA&units=metric"
-        let url = NSURL(string: urlAsString)!
-        let urlSession = NSURLSession.sharedSession()
+        func getJSON(urlToRequest: String) -> NSData? {
+            
+            
+            return NSData(contentsOfURL: NSURL(string: urlToRequest)!)?
+        }
+        func parseJSON(inputData: NSData?) -> NSDictionary?{
+            var error: NSError?
+            var boardsDictionary: NSDictionary?
+            if inputData != nil {
+            boardsDictionary = NSJSONSerialization.JSONObjectWithData(inputData!, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary
+            }
+            return boardsDictionary
+        }
         
-        // Метод dataTaskWithURL создает задачу подключения, который будет использоваться на самом деле отправить запрос. Следует отметить, что она имеет окончания, как это последний параметр.
-        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
-            if (error != nil) {
-                println(error.localizedDescription)
+        // функция searchCity принимает строку поиска и возвращает найденые города по запросу в масиве.
+        func searchCity(searchCity: String) -> NSArray? {
+        var nameCity = [String]()
+        
+        let jsonResult = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/find?q=\(searchCity)&type=like")!)
+            if jsonResult != nil {
+        let list = jsonResult!["list"] as? NSArray
+                if list != nil {
+        for entry in list! {
+            nameCity.append(entry["name"] as String)
+        }
+        }
             }
-            var err: NSError?
-            
-            // С JSONObjectWithData: Опции: метод ошибки класса NSJSONSerialization фактический разбор выполняется. При разборе данные будут записаны в словарь.
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &err) as NSDictionary
-            if (err != nil) {
-                println("JSON Error \(err!.localizedDescription)")
-            }
-            //println(jsonResult)
-            
+            return nameCity
+        }
+        
+        // кусок кода для теста
+        var d = searchCity("Dnipro")!
+        for var i = 0; i < d.count; i++ {
+            println(d[i])
+        }
+        
+        let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?q=Dnipropetrovsk,UA&units=metric"))
+        
+        
+        if let jsonResult = jsonResult {
             
             // Значения из словаря присваиваются этикеток
             
@@ -52,7 +73,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             //let tempMin = jsonDate["temp_min"] as? Float
             let humidity = jsonDate["humidity"] as? Int // Влажность
             let pressure = jsonDate["pressure"] as? Int // Давление
-            println(temp)
+            
             println(humidity)
             println(pressure)
             println("ура")
@@ -60,6 +81,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             
             if var temp = temp {
                 self.text01.stringValue = String(format: "%.2f", temp)
+                println(temp)
             }
             else{
                 self.text01.stringValue = "-"
@@ -91,15 +113,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             
             
             
-                
-            dispatch_async(dispatch_get_main_queue(), {
-
-            })
-        })
-        
-        
-        // Метод resume() начинает веб-запрос.
-        jsonQuery.resume()
+        }
         completionHandler(.NoData)
     
 
