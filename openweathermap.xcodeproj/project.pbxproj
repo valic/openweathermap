@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB4B60C81AC732DB007D238C /* save.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB4B60C71AC732DB007D238C /* save.plist */; };
+		BB4B60C91AC732DB007D238C /* save.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB4B60C71AC732DB007D238C /* save.plist */; };
 		BB79C2D01ABEE97E008BCE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2CF1ABEE97E008BCE48 /* AppDelegate.swift */; };
 		BB79C2D21ABEE97E008BCE48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2D11ABEE97E008BCE48 /* ViewController.swift */; };
 		BB79C2D41ABEE97E008BCE48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2D31ABEE97E008BCE48 /* Images.xcassets */; };
@@ -51,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB4B60C71AC732DB007D238C /* save.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = save.plist; sourceTree = "<group>"; };
 		BB79C2CA1ABEE97E008BCE48 /* openweathermap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openweathermap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB79C2CE1ABEE97E008BCE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB79C2CF1ABEE97E008BCE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */,
+				BB4B60C71AC732DB007D238C /* save.plist */,
 				BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */,
 				BB79C2F51ABEECA2008BCE48 /* Supporting Files */,
 			);
@@ -291,6 +295,7 @@
 			files = (
 				BB79C2D41ABEE97E008BCE48 /* Images.xcassets in Resources */,
 				BB79C2D71ABEE97F008BCE48 /* Main.storyboard in Resources */,
+				BB4B60C81AC732DB007D238C /* save.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +312,7 @@
 			files = (
 				BB79C2FE1ABEECA2008BCE48 /* TodayViewController.xib in Resources */,
 				BB79C2FA1ABEECA2008BCE48 /* InfoPlist.strings in Resources */,
+				BB4B60C91AC732DB007D238C /* save.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

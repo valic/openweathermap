@@ -25,8 +25,6 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         // time we called you
         
         func getJSON(urlToRequest: String) -> NSData? {
-            
-            
             return NSData(contentsOfURL: NSURL(string: urlToRequest)!)?
         }
         func parseJSON(inputData: NSData?) -> NSDictionary?{
@@ -43,22 +41,54 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         var nameCity = [String]()
         
         let jsonResult = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/find?q=\(searchCity)&type=like")!)
-            if jsonResult != nil {
+        
+        if jsonResult != nil {
         let list = jsonResult!["list"] as? NSArray
                 if list != nil {
         for entry in list! {
             nameCity.append(entry["name"] as String)
+                            }
+                                }
         }
-        }
-            }
             return nameCity
         }
         
         // кусок кода для теста
-        var d = searchCity("Dnipro")!
+        var d = searchCity("kie")!
         for var i = 0; i < d.count; i++ {
             println(d[i])
         }
+
+        // plist
+        var myDict: NSDictionary?
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths[0] as String
+        let path = documentsDirectory.stringByAppendingPathComponent("save.plist")
+        println(path)
+        //var path = NSBundle.mainBundle().pathForResource("save", ofType: "plist")
+       // var data : NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!)!
+     
+            myDict = NSDictionary(contentsOfFile: path)
+        
+        if let dict = myDict {
+            // Use your dict here
+            let saveNameCity = dict["nameCity"] as? String
+            println(saveNameCity)
+            
+        
+        }
+        var fileManager = NSFileManager.defaultManager()
+        if (!(fileManager.fileExistsAtPath(path)))
+        {
+            var bundle : NSString = NSBundle.mainBundle().pathForResource("save", ofType: "plist")!
+            fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
+        }
+        var dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChangeMe"]
+        var bedroomFloorID: AnyObject = 101
+        dict.setObject(bedroomFloorID, forKey: "nameCity")
+        dict.writeToFile(path, atomically: false)
+        
         
         let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?q=Dnipropetrovsk,UA&units=metric"))
         
@@ -114,6 +144,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             
             
         }
+        
         completionHandler(.NoData)
     
 
