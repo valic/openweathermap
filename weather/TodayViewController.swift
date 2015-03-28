@@ -8,13 +8,18 @@
 
 import Cocoa
 import NotificationCenter
+import Foundation
 
 class TodayViewController: NSViewController, NCWidgetProviding  {
     
-
     
-  @IBOutlet var text01: NSTextField!
-
+    @IBOutlet weak var tempStr: NSTextField!
+    @IBOutlet weak var pressureStr: NSTextField!
+    @IBOutlet weak var sunriseStr: NSTextField!
+    @IBOutlet weak var sunsetStr: NSTextField!
+    @IBOutlet weak var speedWindStr: NSTextField!
+    @IBOutlet weak var humidityStr: NSTextField!
+    
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -103,18 +108,23 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             //let tempMin = jsonDate["temp_min"] as? Float
             let humidity = jsonDate["humidity"] as? Int // Влажность
             let pressure = jsonDate["pressure"] as? Int // Давление
-            
-            println(humidity)
-            println(pressure)
+
+            println(temp!)
+            println(humidity!)
+            println(pressure!)
+            self.pressureStr.stringValue=String(pressure!)
+            self.humidityStr.stringValue=String(humidity!)
+
             println("ура")
             
             
-            if var temp = temp {
-                self.text01.stringValue = String(format: "%.2f", temp)
-                println(temp)
+            if var
+                temp = temp {
+                self.tempStr.stringValue = String(format: "%.2f", temp)
+               // println(temp)
             }
             else{
-                self.text01.stringValue = "-"
+                //self.text01.stringValue = "-"
             }
             
             // Город
@@ -126,15 +136,28 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             let jsonSunrise = jsonSys["sunrise"] as? Double
             let jsonSunset = jsonSys["sunset"] as? Double // закат
             
+            
             if jsonSunrise != nil || jsonSunset != nil {
             let sunrise = NSDate(timeIntervalSince1970: jsonSunrise!)
             let sunset = NSDate(timeIntervalSince1970: jsonSunset!)
-            }
+                //self.sunriseStr.stringValue=String(sunrise)
+            let dateFormatter = NSDateFormatter()
+                //let sunriseDate = dateFormatter.stringFromDate(NSDate(sunrise))
+                //let sunsetDate = dateFormatter.stringFromDate(NSDate(sunset))
+                //let sunriseDate=stringFromDate(sunrise)
+       // let sunsetDate=stringFromDate(sunset)
+       //println(jsonSunrise)
+                
+                
+            
+            //self.sunriseStr.stringValue=NSDate(sunriseStr)
             
             // wind
             let jsonWind: NSDictionary! = jsonResult["wind"] as? NSDictionary
             let speedWind = jsonWind["speed"] as? Int
             let degWind = jsonWind["deg"] as? Int
+            self.speedWindStr.stringValue=String(speedWind!)
+          
             
             // cloud
             let jsonClouds: NSDictionary! = jsonResult["clouds"] as? NSDictionary
@@ -142,13 +165,11 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             
             
             
-            
         }
         
         completionHandler(.NoData)
-    
-
         
 }
 
+}
 }
