@@ -6,199 +6,26 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="weather" customModuleProvider="target">
             <connections>
-                <outlet property="cloudsStr" destination="sBp-3H-Udb" id="ruD-Po-EVR"/>
-                <outlet property="humidityStr" destination="sBp-3H-Udb" id="Q3a-zL-Sq7"/>
-                <outlet property="pressureStr" destination="p4T-RH-A66" id="DFQ-Rh-gDm"/>
-                <outlet property="speedWindStr" destination="8iJ-vh-m7o" id="aIn-Rq-s19"/>
-                <outlet property="sunriseStr" destination="FiV-L7-wyC" id="Fyk-xh-Pr8"/>
-                <outlet property="sunsetStr" destination="fJf-bJ-CDq" id="9SN-rs-KE4"/>
-                <outlet property="tempStr" destination="4h3-Mf-yNw" id="bWO-en-IWX"/>
+                <outlet property="text01" destination="hB2-iI-PyT" id="0Uc-0e-n1B"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-<<<<<<< Updated upstream
             <rect key="frame" x="0.0" y="-2" width="320" height="213"/>
             <subviews>
-=======
-<<<<<<< HEAD
-            <rect key="frame" x="0.0" y="0.0" width="264" height="296"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2">
-                    <rect key="frame" x="57" y="252" width="151" height="32"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" title="the weather" id="pgq-dU-GDk">
-                        <font key="font" metaFont="system" size="23"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-nu-A9H">
-                    <rect key="frame" x="55" y="193" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="temp:" id="kXf-pe-YVt">
-=======
-            <rect key="frame" x="0.0" y="-2" width="320" height="213"/>
-            <subviews>
->>>>>>> Stashed changes
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-iI-PyT">
                     <rect key="frame" x="0.0" y="131" width="50" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="456456" id="fpf-JF-fKW">
->>>>>>> origin/master
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="у:" target="-2" id="d14-Sg-78M"/>
+                        <action selector="у:" target="-2" id="WOT-U7-oAE"/>
                     </connections>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXf-2x-0uh">
-                    <rect key="frame" x="55" y="173" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="pressure" id="FWG-lb-oTN">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="l9Z-g6-B6d"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4T-RH-A66">
-                    <rect key="frame" x="135" y="173" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="LP4-Qx-NoE">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="gsp-ET-50q"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FiV-L7-wyC">
-                    <rect key="frame" x="135" y="153" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="peL-Cy-Cgh">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="udJ-vh-Qqn"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vet-eX-8NT">
-                    <rect key="frame" x="55" y="211" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="city:" id="BU5-Lm-aEg">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="LYE-wB-Kcu"/>
-                    </connections>
-                </textField>
-<<<<<<< Updated upstream
-=======
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Dx-UE-l98">
-                    <rect key="frame" x="135" y="211" width="98" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Dnipropetrovsk" id="6AG-s7-WqN">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="NBt-yW-Lxr"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDL-BJ-T4n">
-                    <rect key="frame" x="55" y="153" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="sunrise:" id="Mgv-oL-XYv">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="q4x-n9-bTy"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-kY-uGw">
-                    <rect key="frame" x="55" y="133" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="sunset:" id="c8o-wI-VVd">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="Tc4-Ze-75k"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-bJ-CDq">
-                    <rect key="frame" x="135" y="133" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="eXr-PL-XWI">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="JPV-YP-eFU"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-Mf-yNw">
-                    <rect key="frame" x="135" y="193" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="QpI-yL-Qsk">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="Ru0-Fh-FYU"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y04-Rv-FZZ">
-                    <rect key="frame" x="55" y="112" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="speed wind:" id="81v-Mt-IOE">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="86f-wy-9KG"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-0f-b90">
-                    <rect key="frame" x="55" y="92" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="humidity:" id="PpN-ez-nWj">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="qm7-j2-6AL"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-vh-m7o">
-                    <rect key="frame" x="135" y="112" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="rCy-Sk-A8x">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="BDC-cX-614"/>
-                    </connections>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-3H-Udb">
-                    <rect key="frame" x="135" y="92" width="82" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="wJ1-S0-PNP">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="Gc5-Rs-JAi"/>
-                    </connections>
-                </textField>
->>>>>>> Stashed changes
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2">
                     <rect key="frame" x="8" y="165" width="304" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="weather" id="pgq-dU-GDk">
@@ -208,22 +35,7 @@
                     </textFieldCell>
                 </textField>
             </subviews>
-<<<<<<< Updated upstream
             <point key="canvasLocation" x="306" y="439.5"/>
-=======
-<<<<<<< HEAD
-            <constraints>
-                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="3jz-px-Mcc"/>
-                <constraint firstAttribute="centerY" secondItem="KU6-MB-4x2" secondAttribute="centerY" id="Pfr-V0-br0"/>
-                <constraint firstAttribute="width" constant="264" id="Z4J-ux-Eeu"/>
-                <constraint firstAttribute="height" constant="296" id="cFM-to-LyG"/>
-                <constraint firstItem="KU6-MB-4x2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="ekV-N2-YhP"/>
-            </constraints>
-            <point key="canvasLocation" x="278" y="481"/>
-=======
-            <point key="canvasLocation" x="306" y="439.5"/>
->>>>>>> origin/master
->>>>>>> Stashed changes
         </customView>
     </objects>
 </document>

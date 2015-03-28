@@ -72,7 +72,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         let path = documentsDirectory.stringByAppendingPathComponent("save.plist")
         println(path)
         //var path = NSBundle.mainBundle().pathForResource("save", ofType: "plist")
-       // var data : NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!)!
+        // var data : NSMutableDictionary = NSMutableDictionary(contentsOfFile: path!)!
      
             myDict = NSDictionary(contentsOfFile: path)
         
