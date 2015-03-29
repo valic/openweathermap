@@ -14,10 +14,13 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
     
    
     
-    @IBOutlet weak var tempStr: NSTextField!
+    @IBOutlet weak var tempStr: NSTextField!   
     @IBOutlet weak var pressureStr: NSTextField!
     @IBOutlet weak var speedWindStr: NSTextField!
     @IBOutlet weak var humidityStr: NSTextField!
+    
+    
+    
     
     override var nibName: String? {
         return "TodayViewController"
