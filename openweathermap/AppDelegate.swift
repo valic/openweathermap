@@ -30,7 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             var err: NSError?
             
             // С JSONObjectWithData: Опции: метод ошибки класса NSJSONSerialization фактический разбор выполняется. При разборе данные будут записаны в словарь.
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &err) as NSDictionary
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &err) as! NSDictionary
+            
+         //   var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &err) as NSDictionary
             if (err != nil) {
                 println("JSON Error \(err!.localizedDescription)")
             }

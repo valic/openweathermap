@@ -32,7 +32,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         // time we called you
         
         func getJSON(urlToRequest: String) -> NSData? {
-            return NSData(contentsOfURL: NSURL(string: urlToRequest)!)?
+            return NSData(contentsOfURL: NSURL(string: urlToRequest)!)
+            // ранее  было return NSData(contentsOfURL: NSURL(string: urlToRequest)!)?
         }
         func parseJSON(inputData: NSData?) -> NSDictionary?{
             var error: NSError?
@@ -53,7 +54,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         let list = jsonResult!["list"] as? NSArray
                 if list != nil {
         for entry in list! {
-            nameCity.append(entry["name"] as String)
+            nameCity.append(entry["name"] as! String)
+            //  ранее  было  nameCity.append(entry["name"] as String)
                             }
                                 }
         }
@@ -70,7 +72,9 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         var myDict: NSDictionary?
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-        let documentsDirectory = paths[0] as String
+        let documentsDirectory = paths[0] as! String
+        //   ранее  было let documentsDirectory = paths[0] as String
+
         let path = documentsDirectory.stringByAppendingPathComponent("save.plist")
         println(path)
         //var path = NSBundle.mainBundle().pathForResource("save", ofType: "plist")
@@ -89,7 +93,9 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         if (!(fileManager.fileExistsAtPath(path)))
         {
             var bundle : NSString = NSBundle.mainBundle().pathForResource("save", ofType: "plist")!
-            fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
+            fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
+            //  ранее  было fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
+
         }
         var dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChangeMe"]
         var bedroomFloorID: AnyObject = 101
