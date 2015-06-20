@@ -18,7 +18,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
     @IBOutlet weak var pressureStr: NSTextField!
     @IBOutlet weak var speedWindStr: NSTextField!
     @IBOutlet weak var humidityStr: NSTextField!
-    
+    @IBOutlet weak var cityName: NSTextField!
+       
     
     
     
@@ -63,12 +64,13 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         }
         
         // кусок кода для теста
-        var d = searchCity("kie")!
+       /* var d = searchCity("kie")!
         for var i = 0; i < d.count; i++ {
             println(d[i])
         }
+        */
 
-        // plist
+        // plist - Сохранение настроек
         var myDict: NSDictionary?
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
@@ -82,13 +84,19 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
      
             myDict = NSDictionary(contentsOfFile: path)
         
+        
+        
+        var saveNameCity : String?
+        var cityID : Int?
+        
         if let dict = myDict {
             // Use your dict here
-            let saveNameCity = dict["nameCity"] as? String
-            println(saveNameCity)
+            saveNameCity = dict["nameCity"] as? String
+            cityID = dict["cityID"] as? Int
             
-        
+            self.cityName.stringValue=String(saveNameCity!)
         }
+        
         var fileManager = NSFileManager.defaultManager()
         if (!(fileManager.fileExistsAtPath(path)))
         {
@@ -97,20 +105,21 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             //  ранее  было fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
 
         }
-        var dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChangeMe"]
-        var bedroomFloorID: AnyObject = 101
-        dict.setObject(bedroomFloorID, forKey: "nameCity")
+        var dict: NSMutableDictionary = ["nameCity": "Dnipropetrovsk"]
+        var bedroomFloorID: Int = 709930
+        
+        dict.setObject(bedroomFloorID, forKey: "cityID")
+        
         dict.writeToFile(path, atomically: false)
         
-        
-        let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?q=Dnipropetrovsk,UA&units=metric"))
-        
+        let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?id=\(String(cityID!))&units=metric"))
         
         if let jsonResult = jsonResult {
             
             // Значения из словаря присваиваются этикеток
             
             let jsonDate: NSDictionary! = jsonResult["main"] as? NSDictionary
+            
             let temp = jsonDate["temp"] as? Float
             //let tempMax = jsonDate["temp_max"] as? Float
             //let tempMin = jsonDate["temp_min"] as? Float
@@ -120,11 +129,9 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             println(temp!)
             println(humidity!)
             println(pressure!)
+            
             self.pressureStr.stringValue=String(pressure!)
             self.humidityStr.stringValue=String(humidity!)
-
-            println("ура")
-            
             
             if var
                 temp = temp {

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="weather" customModuleProvider="target">
             <connections>
-                <outlet property="humidity" destination="rte-aP-4bx" id="5IT-ki-4Xd"/>
+                <outlet property="cityName" destination="KU6-MB-4x2" id="4LF-rz-G7h"/>
                 <outlet property="humidityStr" destination="rte-aP-4bx" id="7UT-rK-SlT"/>
                 <outlet property="pressureStr" destination="8W4-ca-lQL" id="WF4-8m-D4g"/>
                 <outlet property="speedWindStr" destination="zGC-pq-wpp" id="eTT-pd-5tA"/>
@@ -26,9 +26,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="WOT-U7-oAE"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DD2-kH-S1b">
                     <rect key="frame" x="70" y="110" width="61" height="17"/>
@@ -37,9 +34,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="PIb-QB-kgI"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPU-Na-PMO">
                     <rect key="frame" x="68" y="85" width="46" height="17"/>
@@ -48,9 +42,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="ZyX-Oa-RnX"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-7U-042">
                     <rect key="frame" x="70" y="60" width="61" height="17"/>
@@ -59,9 +50,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="D8W-Wv-OZp"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-rR-15m">
                     <rect key="frame" x="159" y="135" width="57" height="17"/>
@@ -70,9 +58,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="3d5-9V-Cu6"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8W4-ca-lQL">
                     <rect key="frame" x="159" y="110" width="57" height="17"/>
@@ -81,9 +66,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="oqi-jT-u62"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-pq-wpp">
                     <rect key="frame" x="157" y="85" width="49" height="17"/>
@@ -92,9 +74,6 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="fYe-mZ-hdr"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rte-aP-4bx">
                     <rect key="frame" x="159" y="60" width="47" height="17"/>
@@ -103,12 +82,9 @@
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <action selector="у:" target="-2" id="MnB-kQ-rEo"/>
-                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2">
-                    <rect key="frame" x="105" y="182" width="304" height="17"/>
+                    <rect key="frame" x="70" y="176" width="304" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="the weather" id="pgq-dU-GDk">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -121,7 +97,7 @@
                 <constraint firstAttribute="height" constant="500" id="EaV-qN-0FR"/>
                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Lne-AE-rwX"/>
             </constraints>
-            <point key="canvasLocation" x="306" y="439.5"/>
+            <point key="canvasLocation" x="538" y="453.5"/>
         </customView>
     </objects>
 </document>
