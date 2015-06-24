@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>atomically</key>
-	<false/>
+	<key>cityID</key>
+	<integer>709930</integer>
 	<key>nameCity</key>
-	<string>Dnipropetrovsk,UA</string>
+	<string>Dnipropetrovsk</string>
 </dict>
 </plist>
