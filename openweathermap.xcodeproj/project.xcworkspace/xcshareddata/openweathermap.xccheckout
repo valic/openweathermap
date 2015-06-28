@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AD818ADF-FC4B-4668-9B99-751C4EAB4CA3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>openweathermap</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6201B9BE9F43D6BCCF932B60FCBDA089B9F35276</key>
 		<string>https://github.com/valic/openweathermap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>openweathermap.xcodeproj</string>
+	<string>openweathermap.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6201B9BE9F43D6BCCF932B60FCBDA089B9F35276</key>

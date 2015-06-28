@@ -9,17 +9,21 @@
 import Cocoa
 import NotificationCenter
 import Foundation
+import AppKit
+
 
 class TodayViewController: NSViewController, NCWidgetProviding  {
     
-   
-    
+    @IBOutlet weak var weatherIcon: NSImageView!
+       
     @IBOutlet weak var tempStr: NSTextField!   
     @IBOutlet weak var pressureStr: NSTextField!
     @IBOutlet weak var speedWindStr: NSTextField!
     @IBOutlet weak var humidityStr: NSTextField!
     @IBOutlet weak var cityName: NSTextField!
-       
+   
+    
+    
     
     
     
@@ -113,15 +117,21 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         
         //saveInPlist("London", 2643743)
         
-        
-        
+      
         
         
         let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?id=\(String(cityID!))&units=metric"))
         
         if let jsonResult = jsonResult {
             
+            //добавляем иконку
+            var iconNumber = "10d"
+            var imgURL: NSURL = NSURL(string: "http://openweathermap.org/img/w/"+iconNumber+".png")!
+            var imgData: NSData = NSData(contentsOfURL: imgURL)!
+            weatherIcon.image = NSImage(data: imgData)
+            
             // Значения из словаря присваиваются этикеток
+            
             
             let jsonDate: NSDictionary! = jsonResult["main"] as? NSDictionary
             
