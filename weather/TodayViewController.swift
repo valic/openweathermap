@@ -124,11 +124,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         
         if let jsonResult = jsonResult {
             
-            //добавляем иконку
-            var iconNumber = "10d"
-            var imgURL: NSURL = NSURL(string: "http://openweathermap.org/img/w/"+iconNumber+".png")!
-            var imgData: NSData = NSData(contentsOfURL: imgURL)!
-            weatherIcon.image = NSImage(data: imgData)
+            
             
             // Значения из словаря присваиваются этикеток
             
@@ -177,7 +173,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
                 //let sunriseDate=stringFromDate(sunrise)
        // let sunsetDate=stringFromDate(sunset)
        //println(jsonSunrise)
-                
+                }
                 
             
             //self.sunriseStr.stringValue=NSDate(sunriseStr)
@@ -192,15 +188,31 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             // cloud
             let jsonClouds: NSDictionary! = jsonResult["clouds"] as? NSDictionary
             let clouds = jsonClouds["all"] as? Int
+                
+            // weather
+            var weatherID:Int!
+            var weatherMain:String!
+            var iconNumber:String!
             
+            var weatherDescription:String
             
+            if let weather = jsonResult["weather"] as? [AnyObject] {
+                for start in weather {
+                    weatherID = start["id"] as! Int
+                    weatherMain = start["main"] as! String
+                    iconNumber = start["icon"] as! String
+                    weatherDescription = start["description"] as! String
+                }
+            }
             
-        }
+            //добавляем иконку
+            var imgURL: NSURL = NSURL(string: "http://openweathermap.org/img/w/\(iconNumber)"+".png")!
+            var imgData: NSData = NSData(contentsOfURL: imgURL)!
+            weatherIcon.image = NSImage(data: imgData)
         
+            
         completionHandler(.NoData)
         
 }
-        
-
 }
 }
