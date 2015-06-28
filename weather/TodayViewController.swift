@@ -34,8 +34,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         
         func getJSON(urlToRequest: String) -> NSData? {
             return NSData(contentsOfURL: NSURL(string: urlToRequest)!)
-            // ранее  было return NSData(contentsOfURL: NSURL(string: urlToRequest)!)?
         }
+        
         func parseJSON(inputData: NSData?) -> NSDictionary?{
             var error: NSError?
             var boardsDictionary: NSDictionary?
