@@ -29,6 +29,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         return "TodayViewController"
     }
     
+    
+    // https://developer.apple.com/library/mac/samplecode/Lister/Listings/Swift_ListerTodayOSX_TodayViewController_swift.html
     var widgetAllowsEditing: Bool {
         return true
     }
