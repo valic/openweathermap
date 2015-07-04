@@ -19,6 +19,7 @@
 		BB79C2FC1ABEECA2008BCE48 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */; };
 		BB79C2FE1ABEECA2008BCE48 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */; };
 		BB79C3011ABEECA2008BCE48 /* weather.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BB79C2F01ABEECA2008BCE48 /* weather.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BBDD113B1B41D8FA00D587F8 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDD113A1B41D8FA00D587F8 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		BB79C2F91ABEECA2008BCE48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		BBDD113A1B41D8FA00D587F8 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				BB79C2FB1ABEECA2008BCE48 /* TodayViewController.swift */,
 				BB4B60C71AC732DB007D238C /* save.plist */,
 				BB79C2FD1ABEECA2008BCE48 /* TodayViewController.xib */,
+				BBDD113A1B41D8FA00D587F8 /* View.xib */,
 				BB79C2F51ABEECA2008BCE48 /* Supporting Files */,
 			);
 			path = weather;
@@ -310,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD113B1B41D8FA00D587F8 /* View.xib in Resources */,
 				BB79C2FE1ABEECA2008BCE48 /* TodayViewController.xib in Resources */,
 				BB79C2FA1ABEECA2008BCE48 /* InfoPlist.strings in Resources */,
 				BB4B60C91AC732DB007D238C /* save.plist in Resources */,

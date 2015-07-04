@@ -23,12 +23,14 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
     @IBOutlet weak var cityName: NSTextField!
    
     
-    
-    
-    
+
     
     override var nibName: String? {
         return "TodayViewController"
+    }
+    
+    var widgetAllowsEditing: Bool {
+        return true
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
@@ -36,6 +38,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         // with NoData if nothing has changed or NewData if there is new data since the last
         // time we called you
         
+       
         func getJSON(urlToRequest: String) -> NSData? {
             return NSData(contentsOfURL: NSURL(string: urlToRequest)!)
         }
@@ -209,6 +212,7 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
             var imgURL: NSURL = NSURL(string: "http://openweathermap.org/img/w/\(iconNumber)"+".png")!
             var imgData: NSData = NSData(contentsOfURL: imgURL)!
             weatherIcon.image = NSImage(data: imgData)
+            
         
             
         completionHandler(.NoData)
