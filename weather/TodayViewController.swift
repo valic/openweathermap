@@ -65,7 +65,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
                 if list != nil {
         for entry in list! {
             nameCity.append(entry["name"] as! String)
-        }
+            //  ранее  было  nameCity.append(entry["name"] as String)
+                            }
                                 }
         }
             return nameCity
@@ -78,26 +79,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         }
         */
 
-        // Функция создает файл на основании шаблона save.plist
-        func fileCreationPlist (path: String) {
-
-            var fileManager = NSFileManager.defaultManager()
-            
-            // Удаляем файл шаблона save.plist
-            fileManager.removeItemAtPath(path, error:nil)
-            
-            // Создаем файл на основании шаблона save.plist
-            if (!(fileManager.fileExistsAtPath(path)))
-            {
-                var bundle : NSString = NSBundle.mainBundle().pathForResource("save", ofType: "plist")!
-                fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
-            }
-        }
-        
         // plist - Чтение настроек
         var myDict: NSDictionary?
-        var saveNameCity : String?
-        var cityID : Int?
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths[0] as! String
@@ -105,38 +88,32 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
 
         let path = documentsDirectory.stringByAppendingPathComponent("save.plist")
         println(path)
-        
-        // читаем файл
+     
         myDict = NSDictionary(contentsOfFile: path)
+        
+        var saveNameCity : String?
+        var cityID : Int?
         
         if myDict == nil {
 
-            fileCreationPlist(path)
+            // Создаем файл на основании шаблона save.plist
+            var fileManager = NSFileManager.defaultManager()
+            if (!(fileManager.fileExistsAtPath(path)))
+            {
+                var bundle : NSString = NSBundle.mainBundle().pathForResource("save", ofType: "plist")!
+                fileManager.copyItemAtPath(bundle as String, toPath: path, error:nil)
+            }
             
             // читаем файл
             myDict = NSDictionary(contentsOfFile: path)
         }
-        
             // Use your dict here
             saveNameCity = myDict!["nameCity"] as? String
             cityID = myDict!["cityID"] as? Int
         
-        if saveNameCity == nil || cityID == nil {
-            
-            fileCreationPlist(path)
-            
-            // читаем файл
-            myDict = NSDictionary(contentsOfFile: path)
-            
-            // Use your dict here
-            saveNameCity = myDict!["nameCity"] as? String
-            cityID = myDict!["cityID"] as? Int
-        }
+            // выводим имя  города
+            self.cityName.stringValue=String(saveNameCity!)
         
-        // выводим имя  города
-        self.cityName.stringValue=String(saveNameCity!)
-        
-        // Функция сохраняет в plist имя города и ID города
         func saveInPlist(nameSity: String, cityID : Int) {
 
             var dict: NSMutableDictionary = ["nameCity": nameSity, "cityID" : cityID]
@@ -145,7 +122,8 @@ class TodayViewController: NSViewController, NCWidgetProviding  {
         
         //saveInPlist("London", 2643743)
         
-     
+      
+        
         
         let jsonResult: NSDictionary? = parseJSON(getJSON("http://api.openweathermap.org/data/2.5/weather?id=\(String(cityID!))&units=metric"))
         

@@ -22,18 +22,6 @@
 		BBDD113B1B41D8FA00D587F8 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDD113A1B41D8FA00D587F8 /* View.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		BB61EBA91B4B38EE00F950B0 /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = text.plist;
-			isEditable = 1;
-			outputFiles = (
-			);
-			script = "# builtin-copyPlist\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		BB79C2DD1ABEE97F008BCE48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -249,7 +237,6 @@
 				BB79C2EE1ABEECA2008BCE48 /* Resources */,
 			);
 			buildRules = (
-				BB61EBA91B4B38EE00F950B0 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -539,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = weather/weather.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -555,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = weather/weather.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
